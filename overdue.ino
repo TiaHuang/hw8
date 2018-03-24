@@ -5,8 +5,6 @@ int sensorPin = A0;    // select the input pin for the potentiometer
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
-  pinMode(11, OUTPUT);
-  pinMode(12, OUTPUT);
   pinMode(13, OUTPUT);
 
   Serial.begin(9600);
@@ -16,8 +14,6 @@ void loop() {
   for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
     // sets the value (range from 0 to 255):
     analogWrite(13, fadeValue);
-    analogWrite(12, fadeValue);
-    analogWrite(11, fadeValue);
     // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
@@ -26,8 +22,6 @@ void loop() {
   for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 5) {
     // sets the value (range from 0 to 255):
     analogWrite(13, fadeValue);
-    analogWrite(12, fadeValue);
-    analogWrite(11, fadeValue);
     // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
