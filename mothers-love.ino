@@ -7,13 +7,13 @@ void setup() {
   Serial.begin(9600);
 }
 void loop() {
-  for (int fadeValue = 0 ; fadeValue <= 800; fadeValue += 300) {
+  for (int fadeValue = 0 ; fadeValue <= 1200; fadeValue += 800) {
     analogWrite(13, fadeValue);
-    delay(1000);
+    delay(2000);
   }
 
-  for (int fadeValue = 800 ; fadeValue >= 0; fadeValue -= 300) {
+  for (int fadeValue = 1200 ; fadeValue >= 1200; fadeValue -= 800) {
     analogWrite(13, fadeValue);
-    delay(1000);
+    delay(2000);
   }
 }
